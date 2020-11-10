@@ -3,21 +3,58 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
   
+        Rettangolo Pino = new Rettangolo();
         System.out.println("Inserisci la base e l'altezza:\n Base: ");
         Scanner Scan1 = new Scanner(System.in);
-        int Base = Scan1.nextInt();
-
+        Pino.Base = Scan1.nextInt();
 
         System.out.println("Altezza: ");
         Scanner Scan2 = new Scanner(System.in);
-        int Altezza = Scan2.nextInt();
+        Pino.Altezza = Scan2.nextInt();
         
+        Boolean a = true;
+        System.out.print("\033[H\033[2J"); System.out.flush(); 
+        
+        while(a)
+        {
+            System.out.println("Quale delle seguenti opzioni vuoi eseguire? (Premi il numero corrispondente)\n1) Area\n2) Perimetro\n3) Diagonale\n\nPremi 0 per uscire.");
+            Scanner Scan3 = new Scanner(System.in);
+            int Richiesta = Scan3.nextInt();
+            System.out.print("\033[H\033[2J"); System.out.flush(); 
+
+            switch(Richiesta)
+            {
+                case(0):
+                {
+                    a=false;
+                    Scan3.close();
+                    break;            
+                }
+
+                case(1):
+                {
+                    Pino.Area();
+                    break;
+                }
+
+                case(2):
+                {
+                    Pino.Perimetro();
+                    break;
+                }
+
+                case(3):
+                {
+                    Pino.Diagonale();
+                    break;
+                }
+            }
+
+        }
+
         Scan1.close();
         Scan2.close();
-
-        System.out.println("L'area è: " + Base*Altezza);
-        System.out.println("La diagonale è: " + Math.sqrt(Math.pow(Base,2) + Math.pow(Altezza,2)));
-        System.out.println("Il perimetro è: " + (Base*2 + Altezza*2));
+        
     } 
     
 }
