@@ -1,7 +1,7 @@
 public class Rettangolo {
 
-    public int Base;
-    public int Altezza;
+    public float Base;
+    public float Altezza;
 
     public float Area() {
         System.out.println("L'area è: " + Base*Altezza + "\n");

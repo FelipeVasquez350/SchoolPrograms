@@ -14,7 +14,7 @@ public class Main {
 
         for (int i = 0; i<Rettangoli.length; i++)
         {
-            System.out.println("Inserisci la base e l'altezza del rettangolo n°"+(i+1)+":\n Base: ");
+            System.out.println("Inserisci la base e l'altezza del rettangolo n°"+(i+1)+":\nBase: ");
             
             Rettangoli[i].Base = Scan.nextInt();
     
