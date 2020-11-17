@@ -11,15 +11,20 @@ public class Main {
         }
 
         Scanner Scan = new Scanner(System.in);
+        Random r = new Random();
 
         for (int i = 0; i<Rettangoli.length; i++)
         {
-            System.out.println("Inserisci la base e l'altezza del rettangolo n°"+(i+1)+":\nBase: ");
+            /*System.out.println("Inserisci la base e l'altezza del rettangolo n°"+(i+1)+":\nBase: ");
             
             Rettangoli[i].Base = Scan.nextInt();
     
             System.out.println("Altezza: ");
-            Rettangoli[i].Altezza = Scan.nextInt();
+            Rettangoli[i].Altezza = Scan.nextInt();*/
+
+            Rettangoli[i].Base = r.nextInt(50);
+
+            Rettangoli[i].Altezza = r.nextInt(50);
         }
 
         Boolean a = true;
