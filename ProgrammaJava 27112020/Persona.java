@@ -1,8 +1,24 @@
-public class Persona {
+class BMI extends Persona{
+
+    public float BMI;
+
+    public BMI(float Peso, float Altezza) {
+        super(Peso, Altezza);
+    }
+
+    public float getBMI() {
+        return this.BMI;
+    }
+    
+    public void setBMI(float Peso, float Altezza) {
+        this.BMI = Peso/(Altezza*Altezza);
+    }
+}
+
+public class Persona{
 
     public float Peso = 0;
     public float Altezza = 0;
-    public float BMI;
 
     public Persona(float Peso, float Altezza) {
         this.Peso = Peso;
@@ -23,14 +39,5 @@ public class Persona {
 
     public void setAltezza(float Altezza) {
         this.Altezza = Altezza;
-    }
-
-    public float getBMI() {
-        return this.BMI;
-    }
-
-    public void setBMI(float Peso, float Altezza)
-    {
-        this.BMI = Peso/(Altezza*Altezza);
     }
 }

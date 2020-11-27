@@ -8,7 +8,7 @@ public class Main {
         float Peso = Scan.nextFloat();
         System.out.println("Altezza: ");
         float Altezza = Scan.nextFloat();
-        Persona Gino = new Persona(Peso, Altezza);
+        BMI Gino = new BMI(Peso, Altezza);
         Gino.setBMI(Gino.getPeso(), Gino.getAltezza());
         System.out.println("Il tuo Indice di Massa Corporea è: " + Gino.getBMI());
         Scan.close();
